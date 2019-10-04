@@ -1,12 +1,104 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/proxima_nova/proxima_nova_regular.otf") format("otf"),
+    url("../fonts/proxima_nova/proxima_nova_regular.woff2") format("woff2"),
+    url("../fonts/proxima_nova/proxima_nova_regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Heavy";
+  src: url("../fonts/futura-pt-heavy/FuturaPT-Heavy.eot");
+  src: url("../fonts/futura-pt-heavy/FuturaPT-Heavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/futura-pt-heavy/FuturaPT-Heavy.woff") format("woff"),
+    url("../fonts/futura-pt-heavy/FuturaPT-Heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
 }
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background: #464f54;
+  min-height: 100%;
+  font: 27px/1.4 Georgia, "Times New Roman", serif;
+  color: #000;
 }
-.container {
-    margin: 0 auto;
-    max-width: 1140px;
-    width: 96%;
+.post {
+  background: #fff;
+  width: 1060px;
+  margin: 150px auto 50px;
+  padding: 190px 130px 50px;
+  position: relative;
+}
+.post:before {
+  content: "";
+  border-left: 2px solid #e8eced;
+  position: absolute;
+  left: 70px;
+  top: 0;
+  bottom: 0;
+}
+
+.post__suptitle {
+  font: 20px "Proxima Nova", sans-serif;
+  color: #b4b4b4;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.post__suptitle time:not(:empty):before {
+  content: ", ";
+}
+.post__title {
+  color: #2a2a2a;
+  font: 78px/1.1 "Futura PT Heavy", sans-serif;
+  margin: 40px 0 10px;
+  text-transform: uppercase;
+}
+
+.post__subtitle {
+  color: #b4b4b4;
+  font-style: italic;
+  font-size: 30px;
+}
+.post__text {
+  margin: 50px 0;
+}
+.editor {
+}
+.editor__area {
+  background: #181818;
+  padding: 50px 0 50px 60px;
+}
+.editor__buttons {
+}
+.editor__label {
+  font: 15px "Proxima Nova", sans-serif;
+  color: #b4b4b4;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  display: block;
+}
+.editor__input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 15px 15px 0;
+  font: 48px/1.1 "Playfair Display", serif;
+  color: #b4b4b4;
+  transition: border-color 0.4s ease-in;
+}
+.editor__input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.692);
 }
